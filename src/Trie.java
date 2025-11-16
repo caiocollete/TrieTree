@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class Trie {
     private No raiz;
 
@@ -7,7 +5,7 @@ public class Trie {
         raiz = new No();
     }
 
-    private int procuraPosicao(char letra) {
+    private int seachPosition(char letra) {
         return letra - 97;
     }
 
@@ -17,7 +15,7 @@ public class Trie {
 
         word=word.toLowerCase();
         for(int i=0;i<word.length();i++) {
-            pos=procuraPosicao(word.charAt(i));
+            pos= seachPosition(word.charAt(i));
             if(aux.getvLig(pos)==null) {
                 aux.setvLig(pos, new No(word.charAt(i)));
             }
